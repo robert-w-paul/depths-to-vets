@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DEPTHS TO VETS</title>
+  <style>
+    :root {
+      --navy: #1a1a4b;
+      --red: #b22234;
+      --white: #ffffff;
+      --gray: #f4f4f4;
+      --text: #222;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--gray);
+      color: var(--text);
+    }
+
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 120px;
+      margin-bottom: 1rem;
+    }
+
+    .tab-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: var(--red);
+    }
+
+    .tab-nav button {
+      padding: 1rem 1.5rem;
+      margin: 0.2rem;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-weight: bold;
+      font-size: 1rem;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .tab-nav button[aria-selected="true"] {
+      border-bottom: 4px solid var(--white);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 2rem 0;
+    }
+
+    .tab-content:not([hidden]) {
+      display: block;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: 1rem;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      background: var(--red);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    a {
+      color: var(--navy);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo-depths-to-vets.png" alt="Depths to Vets logo">
+    <h1>DEPTHS TO VETS</h1>
+    <p>Guiding Veterans from Service to Support</p>
+  </header>
+
+  <nav class="tab-nav" role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="home">Home</button>
+    <button role="tab" aria-selected="false" aria-controls="va-disability">VA Disability</button>
+    <button role="tab" aria-selected="false" aria-controls="retirement">Retirement</button>
+    <button role="tab" aria-selected="false" aria-controls="smc">SMC</button>
+    <button role="tab" aria-selected="false" aria-controls="tdiu">TDIU</button>
+    <button role="tab" aria-selected="false" aria-controls="education">Education</button>
+    <button role="tab" aria-selected="false" aria-controls="records">Records</button>
+    <button role="tab" aria-selected="false" aria-controls="contact">Contact</button>
+  </nav>
+
+  <main class="container">
+    <section id="home" class="tab-content">
+      <div class="card">
+        <h2>Welcome</h2>
+        <p>This site is dedicated to helping veterans and their families understand, access, and maximize VA, DoD, and state-level benefits.</p>
+        <p>Use the tabs above to explore your options, run benefit estimators, and request your records.</p>
+      </div>
+    </section>
+
+    <section id="va-disability" class="tab-content" hidden>
+      <div class="card">
+        <h2>VA Disability</h2>
+        <p>Learn about how the VA calculates your disability percentage and what conditions are eligible.</p>
+        <ul>
+          <li><a href="https://www.va.gov/disability/about-compensation-rates/" target="_blank">VA Compensation Rates</a></li>
+          <li><a href="https://www.benefits.va.gov/COMPENSATION/rates-index.asp" target="_blank">Past and Current Rate Tables</a></li>
+          <li><a href="https://www.va.gov/find-forms/about-form-21-526ez/" target="_blank">VA Form 21-526EZ - Claim for Disability Compensation</a></li>
+        </ul>
+        <p><strong>Calculator Coming Soon:</strong> Estimate your total VA compensation using real-time logic and dependent data.</p>
+      </div>
+    </section>
+
+    <section id="retirement" class="tab-content" hidden>
+      <div class="card">
+        <h2>Military Retirement</h2>
+        <p>Understand the differences between Final Pay, High-3, REDUX, BRS, and TERA. Learn what qualifies as early retirement and how CRSC/CRDP may affect your pay.</p>
+        <p><strong>Tools Coming Soon:</strong> Retirement pay estimator with CRSC/CRDP inclusion toggle.</p>
+      </div>
+    </section>
+
+    <section id="smc" class="tab-content" hidden>
+      <div class="card">
+        <h2>Special Monthly Compensation (SMC)</h2>
+        <p>SMC is awarded for severe disabilities and loss of function. This includes tiers like SMC-K through SMC-T. Explore rates and qualification tiers:</p>
+        <ul>
+          <li><a href="https://www.va.gov/disability/compensation-rates/special-monthly-compensation/" target="_blank">VA SMC Guide</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="tdiu" class="tab-content" hidden>
+      <div class="card">
+        <h2>TDIU & P&T</h2>
+        <p>Total Disability based on Individual Unemployability (TDIU) provides 100% pay to veterans unable to work due to service-connected disabilities.</p>
+        <p>Forms:</p>
+        <ul>
+          <li><a href="https://www.va.gov/find-forms/about-form-21-8940/" target="_blank">VA Form 21-8940 (TDIU Application)</a></li>
+          <li><a href="https://www.va.gov/find-forms/about-form-21-4192/" target="_blank">VA Form 21-4192 (Employer Statement)</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="education" class="tab-content" hidden>
+      <div class="card">
+        <h2>Education & GI Bill</h2>
+        <p>Explore GI Bill, Chapter 35 (DEA), Yellow Ribbon, and FAFSA compatibility. Learn how to use VA benefits for higher education, vocational training, or on-the-job apprenticeships.</p>
+        <ul>
+          <li><a href="https://www.va.gov/education/about-gi-bill-benefits/" target="_blank">About the GI Bill</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="records" class="tab-content" hidden>
+      <div class="card">
+        <h2>Records & Military Documents</h2>
+        <p>Retrieve key documents to support your claims and benefits access:</p>
+        <ul>
+          <li><a href="https://www.archives.gov/veterans/military-service-records" target="_blank">DD214 / OMPF (National Archives)</a></li>
+          <li><a href="https://www.va.gov/disability/get-va-medical-records/" target="_blank">Service Treatment Records (VA)</a></li>
+          <li><a href="https://www.va.gov/FOIA/" target="_blank">VA Claims File (C-File) via FOIA</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="tab-content" hidden>
+      <div class="card">
+        <h2>Contact Us</h2>
+        <form>
+          <label for="name">Name:</label><br/>
+          <input type="text" id="name" name="name"><br/>
+          <label for="email">Email:</label><br/>
+          <input type="email" id="email" name="email"><br/>
+          <label for="message">Message:</label><br/>
+          <textarea id="message" name="message"></textarea><br/>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Depths to Vets. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tabs = document.querySelectorAll("[role=tab]");
+      const panels = document.querySelectorAll(".tab-content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          tabs.forEach(t => t.setAttribute("aria-selected", "false"));
+          tab.setAttribute("aria-selected", "true");
+
+          panels.forEach(p => p.hidden = true);
+          const target = document.getElementById(tab.getAttribute("aria-controls"));
+          if (target) target.hidden = false;
+        });
+      });
+
+      // Default tab
+      document.querySelector("#home").hidden = false;
+    });
+  </script>
+</body>
+</html>
