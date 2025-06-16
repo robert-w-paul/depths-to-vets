@@ -3,53 +3,220 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Depths to Vets</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
-      color: #212529;
-      margin: 0;
-      padding: 40px;
-      text-align: center;
-    }
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 20px 0;
-    }
-    h1 {
-      margin: 0;
-    }
-    nav {
-      margin: 20px 0;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #004080;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <title>Depths to Vets - Veteran Benefits Support</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Depths to Vets</h1>
-    <p>Veteran Resources. Transition Tools. No BS.</p>
+    <div class="header-content">
+      <div class="logo-section">
+        <!-- Replace the SVG below with your finalized logo or use an <img> tag -->
+        <svg width="80" height="80" aria-label="Depths to Vets logo" style="display:block;margin:0 auto;">
+          <!-- Shield/flag background -->
+          <rect width="80" height="60" fill="#b22234"/>
+          <rect y="10" width="80" height="10" fill="#fff"/>
+          <rect y="30" width="80" height="10" fill="#fff"/>
+          <rect y="50" width="80" height="10" fill="#fff"/>
+          <rect width="32" height="32" fill="#1e3a8a"/>
+          <!-- Simple stars -->
+          <circle cx="8" cy="8" r="2" fill="#fff"/>
+          <circle cx="24" cy="8" r="2" fill="#fff"/>
+          <circle cx="16" cy="20" r="2" fill="#fff"/>
+          <!-- Anchor -->
+          <rect x="37" y="15" width="6" height="30" fill="#1e3a8a"/>
+          <circle cx="40" cy="15" r="5" fill="#1e3a8a"/>
+          <!-- Submarine -->
+          <ellipse cx="40" cy="45" rx="18" ry="7" fill="#1e3a8a"/>
+          <rect x="36" y="38" width="8" height="7" fill="#1e3a8a"/>
+        </svg>
+        <h1 class="company-name">DEPTHS TO VETS</h1>
+        <p class="tagline">Guiding Veterans from Service to Support</p>
+      </div>
+      <nav class="top-nav" aria-label="Main Navigation">
+        <ul role="tablist">
+          <li role="presentation" class="active"><a role="tab" aria-selected="true" href="#home" id="tab-home-link">Home</a></li>
+          <li role="presentation"><a role="tab" aria-selected="false" href="#va-disability" id="tab-va-link">VA Disability</a></li>
+          <li role="presentation"><a role="tab" aria-selected="false" href="#retirement" id="tab-retirement-link">Retirement</a></li>
+          <li role="presentation"><a role="tab" aria-selected="false" href="#smc" id="tab-smc-link">SMC Benefits</a></li>
+          <li role="presentation"><a role="tab" aria-selected="false" href="#tdiu" id="tab-tdiu-link">TDIU / P&amp;T</a></li>
+          <li role="presentation"><a role="tab" aria-selected="false" href="#education" id="tab-education-link">Education &amp; GI Bill</a></li>
+          <li role="presentation"><a role="tab" aria-selected="false" href="#state-benefits" id="tab-state-link">State &amp; Civilian Benefits</a></li>
+          <li role="presentation"><a role="tab" aria-selected="false" href="#records" id="tab-records-link">Records Request</a></li>
+          <li role="presentation"><a role="tab" aria-selected="false" href="#community" id="tab-community-link">Community</a></li>
+          <li role="presentation"><a role="tab" aria-selected="false" href="#contact" id="tab-contact-link">Contact / Get Help</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-
-  <nav>
-    <a href="va-disability.html">VA Disability</a>
-    <a href="retirement.html">Retirement</a>
-    <a href="records.html">Records</a>
-  </nav>
-
   <main>
-    <h2>Welcome to Depths to Vets</h2>
-    <p>This site helps veterans and families navigate VA, DoD, and civilian benefits. Start with one of the sections above.</p>
+    <!-- Home Tab Content -->
+    <section id="home" class="tab-content active" role="tabpanel" aria-labelledby="tab-home-link">
+      <h2>Home</h2>
+      <p class="tab-summary">Welcome to Depths to Vets. This site helps veterans and their families discover and access underused benefits from the VA, DoD, and civilian programs.</p>
+      <div class="ai-assistant-cta">
+        <h3>Coming Soon: AI Assistant</h3>
+        <p>We’re building a step-by-step AI assistant to guide you through VA claims and benefits. Want early access?</p>
+        <button>Notify Me When It’s Ready</button>
+      </div>
+      <div>
+        <h4>About This Tool</h4>
+        <p>This tool is built by veterans, for veterans. Browse the tabs above to explore various benefits and get guidance on how to apply or learn more.</p>
+      </div>
+    </section>
+    <!-- VA Disability Tab Content -->
+    <section id="va-disability" class="tab-content" hidden role="tabpanel" aria-labelledby="tab-va-link">
+      <h2>VA Disability</h2>
+      <p class="tab-summary">Learn about VA Disability compensation, eligibility criteria, how to file a claim, and tips to maximize your disability rating.</p>
+      <div class="card">
+        <h4>Overview</h4>
+        <p>VA Disability compensation provides monthly payments to veterans with service-connected conditions. Content will cover how ratings work, the claims process, and appeals.</p>
+      </div>
+      <div class="card">
+        <h4>Getting Started</h4>
+        <p>Steps to determine your eligibility and gather evidence for your claim will be provided here.</p>
+      </div>
+    </section>
+    <!-- Retirement Tab Content -->
+    <section id="retirement" class="tab-content" hidden role="tabpanel" aria-labelledby="tab-retirement-link">
+      <h2>Retirement</h2>
+      <p class="tab-summary">Find out about military retirement benefits, the Blended Retirement System, CRSC, CRDP, and how to plan for financial stability after service.</p>
+      <div class="card">
+        <h4>Pension Plans</h4>
+        <p>Information on the legacy pension system, Blended Retirement System, and medical/early retirement will be detailed here.</p>
+      </div>
+      <div class="card">
+        <h4>Retirement Calculators</h4>
+        <p>Links and instructions for using retirement pay calculators and planning tools will be provided here.</p>
+      </div>
+    </section>
+    <!-- SMC Benefits Tab Content -->
+    <section id="smc" class="tab-content" hidden role="tabpanel" aria-labelledby="tab-smc-link">
+      <h2>SMC Benefits</h2>
+      <p class="tab-summary">Explore Special Monthly Compensation (SMC) rates, eligibility, and how they can supplement your VA disability pay.</p>
+      <div class="card">
+        <h4>SMC Levels & Rates</h4>
+        <p>2025 SMC-K: $136.06/month. SMC-L through SMC-R2: $4,767.34 to $10,964.66/month. See full chart and eligibility details here.</p>
+      </div>
+      <div class="card">
+        <h4>Qualifying Conditions</h4>
+        <p>Loss or loss of use of hands, feet, eyes, certain organs, or requiring aid and attendance may qualify. Details and examples will be provided.</p>
+      </div>
+    </section>
+    <!-- TDIU / P&T Tab Content -->
+    <section id="tdiu" class="tab-content" hidden role="tabpanel" aria-labelledby="tab-tdiu-link">
+      <h2>TDIU / P&amp;T</h2>
+      <p class="tab-summary">Understand Total Disability Individual Unemployability (TDIU) and Permanent &amp; Total ratings, including qualifications and the application process.</p>
+      <div class="card">
+        <h4>TDIU Qualifications</h4>
+        <p>Criteria for TDIU (inability to maintain employment due to service-connected disabilities) will be explained here.</p>
+      </div>
+      <div class="card">
+        <h4>Permanent &amp; Total (P&amp;T) Status</h4>
+        <p>Explanation of P&amp;T benefits and how to confirm if you have P&amp;T status will be detailed here.</p>
+      </div>
+    </section>
+    <!-- Education & GI Bill Tab Content -->
+    <section id="education" class="tab-content" hidden role="tabpanel" aria-labelledby="tab-education-link">
+      <h2>Education &amp; GI Bill</h2>
+      <p class="tab-summary">Explore education benefits like the GI Bill, scholarships, and other programs to support veterans and their families in pursuing education.</p>
+      <div class="card">
+        <h4>GI Bill Benefits</h4>
+        <p>Overview of Post-9/11 GI Bill, Montgomery GI Bill, and how to transfer benefits to family members will be provided here.</p>
+      </div>
+      <div class="card">
+        <h4>Scholarships &amp; Programs</h4>
+        <p>A list of scholarship opportunities and educational programs for veterans will be outlined here.</p>
+      </div>
+    </section>
+    <!-- State & Civilian Benefits Tab Content -->
+    <section id="state-benefits" class="tab-content" hidden role="tabpanel" aria-labelledby="tab-state-link">
+      <h2>State &amp; Civilian Benefits</h2>
+      <p class="tab-summary">Discover state-level and civilian benefits available to veterans, from tax exemptions to job placement assistance and more.</p>
+      <div class="card">
+        <h4>State Benefits</h4>
+        <p>Each state offers different perks (tax breaks, license fee waivers, etc.). Details will be added here on how to find your state's offerings.</p>
+      </div>
+      <div class="card">
+        <h4>Civilian Resources</h4>
+        <p>Information on civilian programs (nonprofits, local services) for veteran support will be provided here.</p>
+      </div>
+    </section>
+    <!-- Records Request Tab Content -->
+    <section id="records" class="tab-content" hidden role="tabpanel" aria-labelledby="tab-records-link">
+      <h2>Records Request</h2>
+      <p class="tab-summary">Before you can claim most benefits, you need your records. Whether you're missing awards, treatment history, or your DD214, here's how to find it — even if your files were destroyed or lost.</p>
+      <div class="card">
+        <h4>DD214</h4>
+        <p>Your DD214 is your proof of military service. You can request a copy from the National Archives: <a href="https://www.archives.gov/veterans" target="_blank" rel="noopener">archives.gov/veterans</a>.</p>
+      </div>
+      <div class="card">
+        <h4>Official Military Personnel File (OMPF)</h4>
+        <p>Request your full personnel file from the National Personnel Records Center (NPRC). This file contains your service history, evaluations, and more.</p>
+      </div>
+      <div class="card">
+        <h4>Service Treatment Records (STRs)</h4>
+        <p>If you separated before 2014, your STRs may be at NPRC. For more recent service members (post-2014), request copies via TRICARE or your branch’s medical records portal.</p>
+      </div>
+      <div class="card">
+        <h4>VA Claims File (C-File)</h4>
+        <p>You can request your VA claims file by submitting a Privacy Act or FOIA request to the VA. This file contains all documents the VA has related to your claims.</p>
+      </div>
+      <div class="card">
+        <h4>VA Medical Records</h4>
+        <p>Veterans can download their VA medical records through <a href="https://www.myhealth.va.gov" target="_blank" rel="noopener">My HealtheVet</a>. Ensure you have a Premium account to access all records.</p>
+      </div>
+      <div class="card">
+        <h4>Awards &amp; Decorations</h4>
+        <p>If you are missing medals or awards, each branch has its own request process. Use form SF-180 or contact your branch’s awards office to request replacements.</p>
+      </div>
+      <div class="card">
+        <h4>Legal / JAG Records</h4>
+        <p>For legal records (e.g., courts-martial, investigations), contact the JAG or command that handled the case, or file a FOIA request if necessary.</p>
+      </div>
+      <div class="card">
+        <h4>Guard/Reserve Point Summaries</h4>
+        <p>Retirement point summaries (e.g., NGB Form 23 for National Guard) can be obtained through your unit or your branch’s Reserve/Guard personnel system.</p>
+      </div>
+      <div class="card">
+        <h4>Burned or Lost Records</h4>
+        <p>If your records were destroyed (e.g., the 1973 NPRC fire) or lost, request a reconstructed file. Provide details like unit names and service dates to NPRC so they can search alternative archives.</p>
+      </div>
+    </section>
+    <!-- Community Tab Content -->
+    <section id="community" class="tab-content" hidden role="tabpanel" aria-labelledby="tab-community-link">
+      <h2>Community</h2>
+      <p class="tab-summary">Connect with fellow veterans, share experiences, and get peer support for your benefit questions.</p>
+      <div class="card">
+        <h4>Discussion Forums</h4>
+        <p>Ask questions, share your story, and help others in our veteran community forums. (Forum integration coming soon.)</p>
+      </div>
+    </section>
+    <!-- Contact / Get Help Tab Content -->
+    <section id="contact" class="tab-content" hidden role="tabpanel" aria-labelledby="tab-contact-link">
+      <h2>Contact / Get Help</h2>
+      <p class="tab-summary">Need personalized assistance? Reach out through the form below or use the contact information provided to get help with claims and benefits.</p>
+      <div>
+        <p><strong>Email:</strong> support@depthstovets.com</p>
+        <p><strong>Support Line:</strong> 1-800-123-4567</p>
+      </div>
+      <form>
+        <div class="card">
+          <h4>Send us a message</h4>
+          <label for="contact-name">Name:</label><br/>
+          <input type="text" id="contact-name" name="name" placeholder="Your Name" /><br/><br/>
+          <label for="contact-email">Email:</label><br/>
+          <input type="email" id="contact-email" name="email" placeholder="you@example.com" /><br/><br/>
+          <label for="contact-message">Message:</label><br/>
+          <textarea id="contact-message" name="message" rows="4" placeholder="How can we help?"></textarea><br/><br/>
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </section>
   </main>
+  <footer>
+    <p>Depths to Vets | Built by Veterans, for Veterans</p>
+    <p><a href="#">Privacy</a> | <a href="#">Terms</a> | <a href="#">Contact</a></p>
+  </footer>
+  <script src="scripts.js"></script>
 </body>
 </html>
