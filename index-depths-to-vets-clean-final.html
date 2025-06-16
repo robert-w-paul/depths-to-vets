@@ -1,191 +1,552 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DEPTHS TO VETS</title>
-  <style>
-    :root {
-      --navy: #1a1a4b;
-      --red: #b22234;
-      --white: #ffffff;
-      --gray: #f4f4f4;
-      --text: #222;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--gray);
-      color: var(--text);
-    }
-
-    header {
-      background: var(--navy);
-      color: var(--white);
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    header img {
-      max-width: 120px;
-      margin-bottom: 1rem;
-    }
-
-    .tab-nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      background-color: var(--red);
-    }
-
-    .tab-nav button {
-      padding: 1rem 1.5rem;
-      margin: 0.2rem;
-      background: none;
-      border: none;
-      color: var(--white);
-      font-weight: bold;
-      font-size: 1rem;
-      text-transform: uppercase;
-      cursor: pointer;
-    }
-
-    .tab-nav button[aria-selected="true"] {
-      border-bottom: 4px solid var(--white);
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
-
-    .tab-content {
-      display: none;
-      padding: 2rem 0;
-    }
-
-    .tab-content:not([hidden]) {
-      display: block;
-    }
-
-    .card {
-      background: var(--white);
-      border-radius: 8px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      background: var(--navy);
-      color: var(--white);
-      text-align: center;
-      padding: 1rem;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Depths to Vets - Veteran Benefits Support</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMjQiIGZpbGw9IiNiMjIyMzQiLz4KICA8cmVjdCB5PSI0IiB3aWR0aD0iMzIiIGhlaWdodD0iNCIgZmlsbD0iI2ZmZiIvPgogIDxyZWN0IHk9IjEyIiB3aWR0aD0iMzIiIGhlaWdodD0iNCIgZmlsbD0iI2ZmZiIvPgogIDxyZWN0IHk9IjIwIiB3aWR0aD0iMzIiIGhlaWdodD0iNCIgZmlsbD0iI2ZmZiIvPgogIDxyZWN0IHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgZmlsbD0iIzFlM2E4YSIvPgogIDxjaXJjbGUgY3g9IjMiIGN5PSIzIiByPSIxIiBmaWxsPSIjZmZmIi8+CiAgPGNpcmNsZSBjeD0iMTAiIGN5PSIzIiByPSIxIiBmaWxsPSIjZmZmIi8+CiAgPGNpcmNsZSBjeD0iNiIgY3k9IjgiIHI9IjEiIGZpbGw9IiNmZmYiLz4KICA8cmVjdCB4PSIxNSIgeT0iNiIgd2lkdGg9IjIiIGhlaWdodD0iMTIiIGZpbGw9IiMxZTNhOGEiLz4KICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjYiIHI9IjIiIGZpbGw9IiMxZTNhOGEiLz4KICA8ZWxsaXBzZSBjeD0iMTYiIGN5PSIxOCIgcng9IjciIHJ5PSIzIiBmaWxsPSIjMWUzYThhIi8+CiAgPHJlY3QgeD0iMTQiIHk9IjE1IiB3aWR0aD0iNCIgaGVpZ2h0PSIzIiBmaWxsPSIjMWUzYThhIi8+Cjwvc3ZnPg==" />
 </head>
 <body>
   <header>
-    <img src="logo-depths-to-vets.png" alt="Depths to Vets logo">
-    <h1>DEPTHS TO VETS</h1>
-    <p>Guiding Veterans from Service to Support</p>
+    <div class="header-content">
+      <div class="logo-section">
+        <!-- Depths to Vets Logo -->
+        <div class="logo-container">
+          <div class="logo-flag">
+            <div class="flag-stars"></div>
+            <div class="flag-stripes"></div>
+          </div>
+          <div class="anchor-submarine">
+            <div class="anchor"></div>
+            <div class="submarine"></div>
+          </div>
+        </div>
+        <h1 class="company-name">DEPTHS TO VETS</h1>
+        <p class="tagline">Guiding Veterans from Service to Support</p>
+      </div>
+      
+      <nav class="main-nav" role="navigation">
+        <ul role="tablist">
+          <li><a href="#home" role="tab" class="active">Home</a></li>
+          <li><a href="#disability" role="tab">VA Disability</a></li>
+          <li><a href="#retirement" role="tab">Military Retirement</a></li>
+          <li><a href="#smc" role="tab">SMC Benefits</a></li>
+          <li><a href="#tdiu" role="tab">TDIU & P&T</a></li>
+          <li><a href="#calculators" role="tab">Calculators</a></li>
+          <li><a href="#records" role="tab">Records Request</a></li>
+          <li><a href="#community" role="tab">Community</a></li>
+          <li><a href="#contact" role="tab">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <nav class="tab-nav" role="tablist">
-    <button role="tab" aria-selected="true" aria-controls="home">Home</button>
-    <button role="tab" aria-selected="false" aria-controls="va-disability">VA Disability</button>
-    <button role="tab" aria-selected="false" aria-controls="retirement">Retirement</button>
-    <button role="tab" aria-selected="false" aria-controls="smc">SMC</button>
-    <button role="tab" aria-selected="false" aria-controls="tdiu">TDIU</button>
-    <button role="tab" aria-selected="false" aria-controls="education">Education</button>
-    <button role="tab" aria-selected="false" aria-controls="records">Records</button>
-    <button role="tab" aria-selected="false" aria-controls="contact">Contact</button>
-  </nav>
-
-  <main class="container">
-    <section id="home" class="tab-content">
-      <div class="card">
-        <h2>Welcome</h2>
-        <p>This site helps veterans understand and access underused benefits, from VA claims to military retirement and more.</p>
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="tab-content active">
+      <div class="welcome-section">
+        <h2>Welcome to Depths to Vets</h2>
+        <p class="intro-text">Your comprehensive guide to understanding and accessing VA benefits, military retirement, and veteran support services. Navigate the depths of military benefits with confidence.</p>
+        
+        <div class="feature-cards">
+          <div class="card">
+            <h3>VA Disability Calculator</h3>
+            <p>Calculate your disability compensation with dependents and SMC benefits using 2025 rates</p>
+            <button onclick="showTab('calculators')">Calculate Now</button>
+          </div>
+          <div class="card">
+            <h3>Military Retirement Guide</h3>
+            <p>Understand CRSC, CRDP, and all retirement benefit types with current information</p>
+            <button onclick="showTab('retirement')">Learn More</button>
+          </div>
+          <div class="card">
+            <h3>Community Support</h3>
+            <p>Connect with fellow veterans and share experiences in our forums</p>
+            <button onclick="showTab('community')">Join Discussion</button>
+          </div>
+        </div>
+        
+        <div class="ai-assistant-cta">
+          <h3>Coming Soon: AI Assistant</h3>
+          <p>We're building an AI assistant to guide you through VA claims and document analysis. Want early access?</p>
+          <button>Notify Me When Ready</button>
+        </div>
       </div>
     </section>
 
-    <section id="va-disability" class="tab-content" hidden>
-      <div class="card">
-        <h2>VA Disability</h2>
-        <p>Understand how the VA calculates your rating and what compensation you may qualify for.</p>
+    <!-- VA Disability Section -->
+    <section id="disability" class="tab-content">
+      <h2>VA Disability Compensation</h2>
+      <p class="section-summary">Learn about VA disability ratings, compensation rates, and how to maximize your benefits with 2025 rates.</p>
+      
+      <div class="content-grid">
+        <div class="card">
+          <h3>Understanding Disability Ratings</h3>
+          <p>VA disability ratings range from 0% to 100% and are based on how severely your condition affects your ability to function. Ratings are assigned in 10% increments.</p>
+          <ul>
+            <li><strong>10-20%:</strong> $175.51 - $346.95 monthly (no dependent allowances)</li>
+            <li><strong>30-60%:</strong> $537.42 - $1,395.93 monthly (with dependent allowances)</li>
+            <li><strong>70-100%:</strong> $1,759.19 - $3,831.30 monthly (with dependent allowances)</li>
+          </ul>
+        </div>
+        
+        <div class="card">
+          <h3>VA Math Explained</h3>
+          <p>VA uses "whole person theory" - not simple addition. Each disability affects the remaining efficiency:</p>
+          <ul>
+            <li>Start with 100% efficiency</li>
+            <li>Apply largest rating first</li>
+            <li>Subsequent ratings affect remaining efficiency</li>
+            <li><strong>Example:</strong> 60% + 40% = 76% combined (rounds to 80%)</li>
+          </ul>
+        </div>
+        
+        <div class="card">
+          <h3>Static vs Non-Static Conditions</h3>
+          <p><strong>Static:</strong> Permanent conditions unlikely to improve (tinnitus, amputations, stable conditions 5+ years)</p>
+          <p><strong>Non-Static:</strong> Conditions subject to periodic review and potential re-examination</p>
+        </div>
       </div>
     </section>
 
-    <section id="retirement" class="tab-content" hidden>
-      <div class="card">
-        <h2>Retirement</h2>
-        <p>Explore Final Pay, High-3, BRS, TERA and how VA and DoD retirement benefits interact.</p>
+    <!-- Military Retirement Section -->
+    <section id="retirement" class="tab-content">
+      <h2>Military Retirement Benefits</h2>
+      <p class="section-summary">Comprehensive guide to military retirement systems, concurrent receipt programs, and special compensation.</p>
+      
+      <div class="retirement-systems">
+        <div class="card">
+          <h3>Retirement Systems</h3>
+          <div class="retirement-grid">
+            <div class="retirement-item">
+              <h4>Final Pay (Pre-1980)</h4>
+              <p>2.5% × years of service × final basic pay</p>
+              <p>Includes annual COLA adjustments</p>
+            </div>
+            <div class="retirement-item">
+              <h4>High-36 (1980-1986)</h4>
+              <p>2.5% × years of service × average highest 36 months</p>
+              <p>Most common system for current retirees</p>
+            </div>
+            <div class="retirement-item">
+              <h4>REDUX (Post-1986)</h4>
+              <p>Option with $30,000 bonus at 15 years</p>
+              <p>Reduced multiplier until age 62</p>
+            </div>
+            <div class="retirement-item">
+              <h4>BRS (Post-2018)</h4>
+              <p>2.0% multiplier + TSP matching</p>
+              <p>Automatic 1% + up to 4% matching</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <h3>Concurrent Receipt Programs</h3>
+          <div class="concurrent-programs">
+            <div class="program">
+              <h4>CRDP (Concurrent Retirement & Disability Pay)</h4>
+              <p><strong>Eligibility:</strong> 20+ years service + 50%+ VA rating</p>
+              <p><strong>Benefit:</strong> Receive both military retirement and VA compensation</p>
+              <p><strong>Tax Status:</strong> Military retirement taxable, VA compensation tax-free</p>
+            </div>
+            <div class="program">
+              <h4>CRSC (Combat-Related Special Compensation)</h4>
+              <p><strong>Eligibility:</strong> 10%+ VA rating for combat-related disabilities</p>
+              <p><strong>Benefit:</strong> Tax-free monthly compensation</p>
+              <p><strong>2025 Update:</strong> Full retroactive payments now available</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="smc" class="tab-content" hidden>
-      <div class="card">
-        <h2>SMC</h2>
-        <p>Special Monthly Compensation provides extra pay for specific disabilities or combinations of conditions.</p>
+    <!-- SMC Benefits Section -->
+    <section id="smc" class="tab-content">
+      <h2>Special Monthly Compensation (SMC)</h2>
+      <p class="section-summary">Additional tax-free compensation for veterans with severe disabilities beyond standard disability ratings.</p>
+      
+      <div class="smc-rates">
+        <div class="card">
+          <h3>2025 SMC Rates</h3>
+          <div class="rate-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>SMC Level</th>
+                  <th>Veteran Alone</th>
+                  <th>With Spouse</th>
+                  <th>With Spouse & 1 Child</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SMC-K</td>
+                  <td>$136.06</td>
+                  <td>Added to base rating</td>
+                  <td>Added to base rating</td>
+                </tr>
+                <tr>
+                  <td>SMC-L</td>
+                  <td>$4,767.34</td>
+                  <td>$4,980.95</td>
+                  <td>$5,137.38</td>
+                </tr>
+                <tr>
+                  <td>SMC-M</td>
+                  <td>$5,261.24</td>
+                  <td>$5,474.85</td>
+                  <td>$5,631.29</td>
+                </tr>
+                <tr>
+                  <td>SMC-N</td>
+                  <td>$5,985.06</td>
+                  <td>$6,198.67</td>
+                  <td>$6,355.10</td>
+                </tr>
+                <tr>
+                  <td>SMC-O</td>
+                  <td>$6,689.81</td>
+                  <td>$6,903.42</td>
+                  <td>$7,059.85</td>
+                </tr>
+                <tr>
+                  <td>SMC-R1</td>
+                  <td>$9,559.22</td>
+                  <td>$9,772.83</td>
+                  <td>$9,929.27</td>
+                </tr>
+                <tr>
+                  <td>SMC-R2/T</td>
+                  <td>$10,964.66</td>
+                  <td>$11,178.27</td>
+                  <td>$11,334.70</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <div class="card">
+          <h3>SMC Qualifications</h3>
+          <div class="smc-qualifications">
+            <h4>SMC-K ($136.06/month)</h4>
+            <ul>
+              <li>Loss or loss of use of hand, foot, or eye</li>
+              <li>Loss of reproductive organs</li>
+              <li>Total deafness in both ears</li>
+              <li>Can receive up to 3 separate SMC-K awards</li>
+            </ul>
+            
+            <h4>SMC-L through SMC-O</h4>
+            <ul>
+              <li>SMC-L: Loss of both feet, or one foot plus loss of use of other</li>
+              <li>SMC-M: More severe combinations</li>
+              <li>SMC-N: Multiple severe disabilities</li>
+              <li>SMC-O: Most severe combinations before R-level care</li>
+            </ul>
+            
+            <h4>SMC-R Levels</h4>
+            <ul>
+              <li>SMC-R1: Requires aid and attendance for daily activities</li>
+              <li>SMC-R2: Requires regular care from licensed healthcare professional</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="tdiu" class="tab-content" hidden>
-      <div class="card">
-        <h2>TDIU</h2>
-        <p>Total Disability based on Individual Unemployability pays at the 100% level if you cannot work due to service-connected issues.</p>
+    <!-- TDIU & P&T Section -->
+    <section id="tdiu" class="tab-content">
+      <h2>TDIU & Permanent & Total (P&T)</h2>
+      <p class="section-summary">Understanding Total Disability Individual Unemployability and Permanent & Total status benefits.</p>
+      
+      <div class="tdiu-content">
+        <div class="card">
+          <h3>TDIU Eligibility</h3>
+          <div class="tdiu-requirements">
+            <h4>Schedular Requirements (must meet one):</h4>
+            <ul>
+              <li>One service-connected disability rated 60% or higher</li>
+              <li>Multiple service-connected disabilities with:
+                <ul>
+                  <li>Combined rating of 70% or higher</li>
+                  <li>At least one condition rated 40% or higher</li>
+                </ul>
+              </li>
+            </ul>
+            
+            <h4>Unemployability Requirements:</h4>
+            <ul>
+              <li>Unable to secure or maintain substantially gainful employment</li>
+              <li>Due to service-connected disabilities</li>
+              <li>Income typically cannot exceed Federal poverty threshold</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="card">
+          <h3>P&T Status Benefits</h3>
+          <p>100% Permanent & Total status provides compensation at the 100% rate ($3,831.30 for veteran alone) plus additional benefits:</p>
+          <ul>
+            <li><strong>CHAMPVA:</strong> Healthcare coverage for dependents</li>
+            <li><strong>Chapter 35 DEA:</strong> Educational assistance for family members</li>
+            <li><strong>Property Tax Exemptions:</strong> Varies by state</li>
+            <li><strong>VA Loan Benefits:</strong> Funding fee waiver</li>
+            <li><strong>National Parks:</strong> Free lifetime access pass</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section id="education" class="tab-content" hidden>
-      <div class="card">
-        <h2>Education</h2>
-        <p>Explore GI Bill, Chapter 35, Yellow Ribbon and other options for you and your family.</p>
+    <!-- Interactive Calculators -->
+    <section id="calculators" class="tab-content">
+      <h2>Benefit Calculators</h2>
+      <p class="section-summary">Calculate your potential VA compensation and understand VA Math with our interactive tools.</p>
+      
+      <div class="calculator-section">
+        <div class="card">
+          <h3>VA Disability Compensation Calculator</h3>
+          <div class="calculator-form">
+            <div class="form-group">
+              <label for="disability-rating">Combined Disability Rating:</label>
+              <select id="disability-rating">
+                <option value="">Select Rating</option>
+                <option value="10">10%</option>
+                <option value="20">20%</option>
+                <option value="30">30%</option>
+                <option value="40">40%</option>
+                <option value="50">50%</option>
+                <option value="60">60%</option>
+                <option value="70">70%</option>
+                <option value="80">80%</option>
+                <option value="90">90%</option>
+                <option value="100">100%</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="spouse">Spouse:</label>
+              <select id="spouse">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+                <option value="aa">Yes (receives Aid & Attendance)</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="children-under-18">Children Under 18:</label>
+              <input type="number" id="children-under-18" min="0" max="10" value="0">
+            </div>
+            
+            <div class="form-group">
+              <label for="children-over-18">Children Over 18 (in school):</label>
+              <input type="number" id="children-over-18" min="0" max="10" value="0">
+            </div>
+            
+            <div class="form-group">
+              <label for="dependent-parents">Dependent Parents:</label>
+              <select id="dependent-parents">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="smc-k">SMC-K Awards:</label>
+              <select id="smc-k">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+            
+            <button onclick="calculateCompensation()">Calculate Monthly Payment</button>
+            
+            <div id="calculation-result" class="result-display"></div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <h3>VA Math Calculator</h3>
+          <div class="va-math-calculator">
+            <div class="form-group">
+              <label>Enter individual disability ratings (separated by commas):</label>
+              <input type="text" id="individual-ratings" placeholder="e.g., 60, 40, 20, 10">
+            </div>
+            <div class="form-group">
+              <label for="bilateral">Bilateral Factor (for extremity conditions):</label>
+              <input type="checkbox" id="bilateral">
+            </div>
+            <button onclick="calculateVAMath()">Calculate Combined Rating</button>
+            <div id="va-math-result" class="result-display"></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="records" class="tab-content" hidden>
-      <div class="card">
-        <h2>Records</h2>
-        <p>Learn how to retrieve your DD214, service treatment records, VA claims file and more.</p>
+    <!-- Records Request Section -->
+    <section id="records" class="tab-content">
+      <h2>Military Records Request</h2>
+      <p class="section-summary">Before you can claim most benefits, you need your records. Here's how to find them - even if files were destroyed or lost.</p>
+      
+      <div class="records-grid">
+        <div class="card">
+          <h4>DD214</h4>
+          <p>Your DD214 is your proof of military service. You can request a copy from the National Archives: <a href="https://www.archives.gov/veterans" target="_blank" rel="noopener">archives.gov/veterans</a>.</p>
+        </div>
+        
+        <div class="card">
+          <h4>Official Military Personnel File (OMPF)</h4>
+          <p>Request your full personnel file from the National Personnel Records Center (NPRC). This file contains your service history, evaluations, and more.</p>
+        </div>
+        
+        <div class="card">
+          <h4>Service Treatment Records (STRs)</h4>
+          <p>If you separated before 2014, your STRs may be at NPRC. For more recent service members, request copies via TRICARE or your branch's medical records portal.</p>
+        </div>
+        
+        <div class="card">
+          <h4>VA Claims File (C-File)</h4>
+          <p>Request your VA claims file by submitting a Privacy Act or FOIA request to the VA. This file contains all documents the VA has related to your claims.</p>
+        </div>
+        
+        <div class="card">
+          <h4>VA Medical Records</h4>
+          <p>Veterans can download their VA medical records through <a href="https://www.myhealth.va.gov" target="_blank" rel="noopener">My HealtheVet</a>. Ensure you have a Premium account to access all records.</p>
+        </div>
+        
+        <div class="card">
+          <h4>Awards & Decorations</h4>
+          <p>If you are missing medals or awards, each branch has its own request process. Use form SF-180 or contact your branch's awards office to request replacements.</p>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="tab-content" hidden>
-      <div class="card">
-        <h2>Contact</h2>
-        <p>Need help? Use the contact form or reach out by email for guidance on your next step.</p>
+    <!-- Community Section -->
+    <section id="community" class="tab-content">
+      <h2>Veteran Community</h2>
+      <p class="section-summary">Connect with fellow veterans, share experiences, and get peer support for your benefit questions.</p>
+      
+      <div class="community-features">
+        <div class="card">
+          <h3>Discussion Forums</h3>
+          <div class="forum-categories">
+            <div class="forum-category">
+              <h4>🎯 Ask a Vet</h4>
+              <p>Get advice from experienced veterans on benefits, claims, and life after service.</p>
+              <span class="post-count">Coming Soon</span>
+            </div>
+            <div class="forum-category">
+              <h4>📖 Share Your Story</h4>
+              <p>Share your military experiences and transition journey with the community.</p>
+              <span class="post-count">Coming Soon</span>
+            </div>
+            <div class="forum-category">
+              <h4>💰 Benefits Help</h4>
+              <p>Discuss VA claims, ratings, appeals, and benefit optimization strategies.</p>
+              <span class="post-count">Coming Soon</span>
+            </div>
+            <div class="forum-category">
+              <h4>🏆 SMC & Special Cases</h4>
+              <p>Special Monthly Compensation and complex benefit situations.</p>
+              <span class="post-count">Coming Soon</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <h3>Resource Exchange</h3>
+          <p>Share helpful resources, forms, and tips with the veteran community.</p>
+          <ul>
+            <li>VA Forms and Templates</li>
+            <li>Medical Evidence Guidelines</li>
+            <li>Buddy Letter Examples</li>
+            <li>State-Specific Benefits</li>
+            <li>VSO Recommendations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="tab-content">
+      <h2>Contact & Get Help</h2>
+      <p class="section-summary">Need personalized assistance? Reach out for help with your veteran benefits questions.</p>
+      
+      <div class="contact-content">
+        <div class="card">
+          <h3>Contact Information</h3>
+          <p><strong>Email:</strong> support@depthstovets.com</p>
+          <p><strong>Support:</strong> Available through our community forums</p>
+          
+          <h4>Important Resources</h4>
+          <ul>
+            <li><a href="https://va.gov" target="_blank">VA.gov - Official VA Website</a></li>
+            <li><a href="https://www.va.gov/find-locations" target="_blank">Find Your Local VA Office</a></li>
+            <li><a href="https://www.va.gov/disability/how-to-file-claim" target="_blank">How to File a VA Claim</a></li>
+            <li><a href="https://www.va.gov/records" target="_blank">Request Military Records</a></li>
+          </ul>
+        </div>
+        
+        <div class="card">
+          <h3>Important Disclaimer</h3>
+          <p><strong>Depths to Vets is not affiliated with the Department of Veterans Affairs or the U.S. Government.</strong> This site provides educational information only. For official advice and claim assistance, consult with accredited representatives or Veteran Service Organizations.</p>
+          
+          <p>All compensation rates and benefit information are current as of 2025 but may change. Always verify information with official VA sources before making benefit decisions.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Depths to Vets. All rights reserved.</p>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="logo-container small">
+          <div class="logo-flag">
+            <div class="flag-stars"></div>
+            <div class="flag-stripes"></div>
+          </div>
+          <div class="anchor-submarine">
+            <div class="anchor"></div>
+            <div class="submarine"></div>
+          </div>
+        </div>
+        <h3>DEPTHS TO VETS</h3>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#disability">VA Disability</a></li>
+            <li><a href="#retirement">Military Retirement</a></li>
+            <li><a href="#calculators">Calculators</a></li>
+            <li><a href="#community">Community</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://va.gov" target="_blank">VA.gov</a></li>
+            <li><a href="https://www.va.gov/find-forms" target="_blank">VA Forms</a></li>
+            <li><a href="https://www.va.gov/ogc/apps/accreditation" target="_blank">Find a VSO</a></li>
+            <li><a href="https://www.va.gov/decision-reviews" target="_blank">Appeals Process</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p><strong>Disclaimer:</strong> Depths to Vets is not affiliated with the Department of Veterans Affairs or the U.S. Government. This site provides educational information only.</p>
+      <p>&copy; 2025 Depths to Vets. Built by Veterans, for Veterans.</p>
+    </div>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const tabs = document.querySelectorAll("[role=tab]");
-      const panels = document.querySelectorAll(".tab-content");
-
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          tabs.forEach(t => t.setAttribute("aria-selected", "false"));
-          tab.setAttribute("aria-selected", "true");
-
-          panels.forEach(p => p.hidden = true);
-          const target = document.getElementById(tab.getAttribute("aria-controls"));
-          if (target) target.hidden = false;
-        });
-      });
-
-      // Ensure home tab is visible on first load
-      document.querySelector("#home").hidden = false;
-    });
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
