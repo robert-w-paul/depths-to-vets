@@ -9,11 +9,13 @@
 </head>
 <body>
   <header>
-    <h1>DEPTHS TO VETS</h1>
-    <p>Guiding Veterans from Service to Support</p>
+    <div class="container">
+      <h1>DEPTHS TO VETS</h1>
+      <p>Guiding Veterans from Service to Support</p>
+    </div>
   </header>
 
-  <nav class="top-nav" role="tablist">
+  <nav class="tab-nav" role="tablist">
     <button role="tab" aria-selected="true" aria-controls="home">Home</button>
     <button role="tab" aria-selected="false" aria-controls="va-disability">VA Disability</button>
     <button role="tab" aria-selected="false" aria-controls="retirement">Retirement</button>
@@ -24,46 +26,69 @@
     <button role="tab" aria-selected="false" aria-controls="contact">Contact</button>
   </nav>
 
-  <main>
+  <main class="container">
     <section id="home" class="tab-content">
-      <h2>Welcome</h2>
-      <p>This platform is dedicated to helping veterans access the benefits they've earned.</p>
+      <div class="card">
+        <h2>Welcome</h2>
+        <p>This site helps veterans understand and access underused benefits.</p>
+      </div>
     </section>
+
     <section id="va-disability" class="tab-content" hidden>
-      <h2>VA Disability</h2>
-      <p>Understand ratings, math, and how to apply.</p>
+      <div class="card">
+        <h2>VA Disability</h2>
+        <p>Understand ratings, math, and how to apply.</p>
+      </div>
     </section>
+
     <section id="retirement" class="tab-content" hidden>
-      <h2>Military Retirement</h2>
-      <p>Compare retirement plans and eligibility paths.</p>
+      <div class="card">
+        <h2>Military Retirement</h2>
+        <p>Compare systems like Final Pay, High-3, BRS, and TERA.</p>
+      </div>
     </section>
+
     <section id="smc" class="tab-content" hidden>
-      <h2>Special Monthly Compensation</h2>
-      <p>Explore 2025 SMC rates and qualification criteria.</p>
+      <div class="card">
+        <h2>Special Monthly Compensation (SMC)</h2>
+        <p>Review the 2025 SMC rates and criteria.</p>
+      </div>
     </section>
+
     <section id="tdiu" class="tab-content" hidden>
-      <h2>TDIU & P&T</h2>
-      <p>Find out if you qualify for Total Disability due to Individual Unemployability.</p>
+      <div class="card">
+        <h2>TDIU & P&T</h2>
+        <p>Eligibility for Total Disability based on Individual Unemployability.</p>
+      </div>
     </section>
+
     <section id="education" class="tab-content" hidden>
-      <h2>Education & GI Bill</h2>
-      <p>Make the most of your post-service education benefits.</p>
+      <div class="card">
+        <h2>Education & GI Bill</h2>
+        <p>Explore GI Bill programs and other education benefits.</p>
+      </div>
     </section>
+
     <section id="records" class="tab-content" hidden>
-      <h2>Records & DD214</h2>
-      <p>Request missing documents from the VA or National Archives.</p>
+      <div class="card">
+        <h2>Records & DD214</h2>
+        <p>Request official military documents and claim files.</p>
+      </div>
     </section>
+
     <section id="contact" class="tab-content" hidden>
-      <h2>Contact Us</h2>
-      <form>
-        <label for="name">Name:</label><br/>
-        <input type="text" id="name" name="name"><br/>
-        <label for="email">Email:</label><br/>
-        <input type="email" id="email" name="email"><br/>
-        <label for="message">Message:</label><br/>
-        <textarea id="message" name="message"></textarea><br/>
-        <button type="submit">Send</button>
-      </form>
+      <div class="card">
+        <h2>Contact Us</h2>
+        <form>
+          <label for="name">Name:</label><br/>
+          <input type="text" id="name" name="name"><br/>
+          <label for="email">Email:</label><br/>
+          <input type="email" id="email" name="email"><br/>
+          <label for="message">Message:</label><br/>
+          <textarea id="message" name="message"></textarea><br/>
+          <button type="submit">Send</button>
+        </form>
+      </div>
     </section>
   </main>
 
